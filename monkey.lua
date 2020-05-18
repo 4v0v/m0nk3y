@@ -18,6 +18,7 @@ table.insert(package.loaders, 1, function(name)
             { pattern = "||"            , replacement = " or "},
             { pattern = "!="            , replacement = "~="},
             { pattern = "!"             , replacement = " not "},
+	    { pattern = "([%s,={%(])fn%(" , replacement = "%1function("},
         }
     ) do 
 		file = file:gsub(v.pattern, v.replacement) 
