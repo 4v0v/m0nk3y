@@ -20,7 +20,9 @@ Add syntax sugar to lua =
 
 ## How ?
 https://pgl.yoyo.org/luai/i/require
+
 https://pgl.yoyo.org/luai/i/package.loaders
+
 Every time 'require()' is called, modify some tokens with others
 
 ## Warning
