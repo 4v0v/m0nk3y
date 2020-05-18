@@ -18,6 +18,7 @@ Add syntax sugar to lua:
   - ||
   - !=
   - !
+  - fn()
 
 ## How ?
 https://pgl.yoyo.org/luai/i/require
@@ -46,9 +47,13 @@ script.lua
   var2 *= var1
   var2 -= 5
   
-  if !false && var1 != var2 then 
-    print(var1, var2)
+  local my_function = fn(a, b)
+    if !false && var1 != var2 then 
+      print(var1, var2)
+    end
+    print(a, b)
   end
   
+  my_function('hello', 'sailor')
   
 ```
