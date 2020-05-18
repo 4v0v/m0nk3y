@@ -25,7 +25,7 @@ https://pgl.yoyo.org/luai/i/require
 
 https://pgl.yoyo.org/luai/i/package.loaders
 
-Every time 'require()' is called, modify some tokens with others
+Everytime 'require()' is called, modify some tokens with others
 
 ## Warning
 Currently only work with the Love2d framework, you need to replace the ''love.filesystem.read(name)'' function with your own to make it work with vanilla lua.
