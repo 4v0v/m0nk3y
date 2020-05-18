@@ -1,10 +1,10 @@
-# lua_monkeypatch
+# Monkey
 
 
 ## What is it ?
 Inspired by https://github.com/bartbes/Meta
 
-Add syntax sugar to lua:
+Monkeypatch lua to add some syntactic sugar:
 
   - ++
   - +=
