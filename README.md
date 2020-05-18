@@ -2,7 +2,8 @@
 
 
 ## What ?
-Inspired by : https://github.com/bartbes/Meta
+Inspired by https://github.com/bartbes/Meta
+
 Add syntax sugar to lua:
 
   - ++
