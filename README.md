@@ -1,7 +1,7 @@
 # lua_monkeypatch
 
 
-## What ?
+## What is it?
 Inspired by https://github.com/bartbes/Meta
 
 Add syntax sugar to lua:
