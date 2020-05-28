@@ -1,4 +1,4 @@
-# Monkey
+# M0nk3y
 
 
 ## What is it ?
@@ -34,7 +34,7 @@ Currently only work with the Love2d framework, you need to replace the ''love.fi
 ## Exemple
 main.lua
 ```lua
-  require('monkeypatch')
+  require('m0nk3y')
   require('script')
 ```
 
