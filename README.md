@@ -19,8 +19,10 @@ Monkeypatch lua to add some syntactic sugar:
   - !=
   - !
   - fn()
-  - for pairs(table)
-  - for ipairs(table)
+  - for 100 do
+  - for table do
+  - for value in table do
+  - for key, value in table do
 ## How ?
 https://pgl.yoyo.org/luai/i/require
 
@@ -57,14 +59,22 @@ script.lua
   
   my_function('hello', 'sailor')
   
-  local map = { one = '1', two = '2', three = '3'}
-  local array = {'a', 'b', 'c'}
-
-  for pairs(map) do 
-      print(key, value)
+  for 100 do 
+    print(index)
+  end
+  
+  local map = { one = 'a', two = 'b', three = 'c'}
+  
+  for map do 
+    print(key, it)
   end
 
-  for ipairs(array) do 
-      print(index, value)
+  for letter in map do 
+    print(key, letter)
   end
+  
+  for number, letter in map do 
+    print(number, letter)
+  end
+
 ```
