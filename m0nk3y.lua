@@ -24,7 +24,7 @@ table.insert(package.loaders, 2, function(name)
             { pattern = "for%s".. number .. "%sdo"                        , replacement = "for index = 1, %1 do"}, -- for 100 do end
             { pattern = "for%s".. var    .. "%sdo"                        , replacement = "for key, it in pairs(%1) do"}, -- for table do end
             { pattern = "for%s".. simple_var .. "%sin%s" .. var .. "%sdo" , replacement = "for key, %1 in pairs(%2) do"}, -- for value in table do end
-            { pattern = "for%s".. simple_var .. ",[%s]?" .. simple_var .. "%sin%s" .. var .. "%sdo" , replacement = "for key, %1 in pairs(%2) do"}, -- for key, value in table do end
+            { pattern = "for%s".. simple_var .. ",[%s]?" .. simple_var .. "%sin%s" .. var .. "%sdo" , replacement = "for %1, %2 in pairs(%3) do"}, -- for key, value in table do end
         }
     ) do 
         file = file:gsub(v.pattern, v.replacement)
