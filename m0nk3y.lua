@@ -8,7 +8,7 @@ table.insert(package.loaders, 2, function(name)
 	local number = "([%d]+)"
 	local patterns = {
 		{ pattern = var .. "%s*%+=" , replacement = "%1 = %1 + "}, -- +=
-		{ pattern = var .. "%s*%-=" , replacement = "%1 = %1 - "},  -- -=
+		{ pattern = var .. "%s*%-=" , replacement = "%1 = %1 - "}, -- -=
 		{ pattern = var .. "%s*%*=" , replacement = "%1 = %1 * "}, -- *=
 		{ pattern = var .. "%s*/="  , replacement = "%1 = %1 / "}, -- /=
 		{ pattern = var .. "%s*^="  , replacement = "%1 = %1 ^ "}, -- ^=
