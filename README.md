@@ -18,11 +18,11 @@ Monkeypatch lua to add some syntactic sugar:
   - ||
   - !=
   - !
-  - fn()
-  - for 100 do
-  - for table do
-  - for value in table do
-  - for key, value in table do
+  - **fn() end**
+  - **for** 100 **do end**
+  - **for** table **do end**
+  - **for** value **in** table **do end**
+  - **for** key, value **in** table **do end**
 ## How ?
 https://pgl.yoyo.org/luai/i/require
 
