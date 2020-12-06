@@ -14,7 +14,7 @@ table.insert(package.loaders, 2, function(name)
 		{ pattern = var .. "%s*^="  , replacement = "%1 = %1 ^ "}, -- ^=
 		{ pattern = var .. "%s*%%=" , replacement = "%1 = %1 %% "}, -- %=
 		{ pattern = var .. "%s*%.%.=", replacement = "%1 = %1 .. "}, -- ..=
-		{ pattern = var .. "%+%+"   , replacement = "%1 = %1 + 1"}, -- ++
+		{ pattern = var .. "%s*%+%+"   , replacement = "%1 = %1 + 1"}, -- ++
 		{ pattern = "&&"            , replacement = " and "},
 		{ pattern = "||"            , replacement = " or "},
 		{ pattern = "!="            , replacement = "~="},
