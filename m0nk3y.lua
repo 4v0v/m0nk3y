@@ -19,7 +19,7 @@ table.insert(package.loaders, 2, function(name)
 		{ pattern = "&&"            , replacement = " and "},
 		{ pattern = "||"            , replacement = " or "},
 		{ pattern = "!="            , replacement = "~="},
-		{ pattern = "!"             , replacement = " not "},
+		{ pattern = "!" .. var_with_parenthesis, replacement = " not %1"},
 		{ pattern = "([%s,={%(])fn%(", replacement = "%1function("}, -- fn() end
 		{ pattern = "for%s".. number .. "%sdo", replacement = "for index = 1, %1 do"}, -- for 100 do end
 		{ pattern = "for%s".. var_with_parenthesis .. "%sdo", replacement = "for key, it in pairs(%1) do"}, -- for table do end
