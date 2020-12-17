@@ -1,7 +1,7 @@
 table.insert(package.loaders, 2, function(name)
 	local name = name:gsub("%.", "/") .. ".lua"
 	local file = love.filesystem.read(name)
-	if not file then return nil end
+	if not file then return end
 
 	local var = "([%w%.:_%[%]'\"]+)"
 	local var_with_parenthesis = "([%w%.:_%[%]'\"%(%)]+)"
