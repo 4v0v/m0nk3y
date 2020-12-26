@@ -66,7 +66,7 @@ script.lua
   my_function('hello', 'sailor')
   
   for 100 do 
-    print(index)
+    print(it)
   end
   
   local map = { one = 'a', two = 'b', three = 'c'}
