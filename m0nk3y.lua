@@ -8,17 +8,18 @@ table.insert(package.loaders, 2, function(name)
 	local simple_var = "([%w_]+)"
 	local number = "([%d]+)"
 	local patterns = {
-		{ pattern = var .. "%s*%+=" , replacement = "%1 = %1 + "}, -- +=
-		{ pattern = var .. "%s*%-=" , replacement = "%1 = %1 - "}, -- -=
-		{ pattern = var .. "%s*%*=" , replacement = "%1 = %1 * "}, -- *=
-		{ pattern = var .. "%s*/="  , replacement = "%1 = %1 / "}, -- /=
-		{ pattern = var .. "%s*^="  , replacement = "%1 = %1 ^ "}, -- ^=
-		{ pattern = var .. "%s*%%=" , replacement = "%1 = %1 %% "}, -- %=
+		{ pattern = "@"              , replacement = "self"},
+		{ pattern = var .. "%s*%+="  , replacement = "%1 = %1 + "}, -- +=
+		{ pattern = var .. "%s*%-="  , replacement = "%1 = %1 - "}, -- -=
+		{ pattern = var .. "%s*%*="  , replacement = "%1 = %1 * "}, -- *=
+		{ pattern = var .. "%s*/="   , replacement = "%1 = %1 / "}, -- /=
+		{ pattern = var .. "%s*^="   , replacement = "%1 = %1 ^ "}, -- ^=
+		{ pattern = var .. "%s*%%="  , replacement = "%1 = %1 %% "}, -- %=
 		{ pattern = var .. "%s*%.%.=", replacement = "%1 = %1 .. "}, -- ..=
-		{ pattern = var .. "%s*%+%+", replacement = "%1 = %1 + 1"}, -- ++
-		{ pattern = "&&"            , replacement = " and "},
-		{ pattern = "||"            , replacement = " or "},
-		{ pattern = "!="            , replacement = "~="},
+		{ pattern = var .. "%s*%+%+" , replacement = "%1 = %1 + 1"}, -- ++
+		{ pattern = "&&"             , replacement = " and "},
+		{ pattern = "||"             , replacement = " or "},
+		{ pattern = "!="             , replacement = "~="},
 		{ pattern = "!" .. var_with_parenthesis, replacement = " not %1"},
 		{ pattern = "([%s,={%(])fn%(", replacement = "%1function("}, -- fn() end
 		{ pattern = "for%s".. number .. "%sdo", replacement = "for index = 1, %1 do"}, -- for 100 do end
@@ -30,3 +31,4 @@ table.insert(package.loaders, 2, function(name)
 	for i, v in ipairs(patterns) do file = file:gsub(v.pattern, v.replacement) end
 	return assert(loadstring(file, name))
 end)
+
