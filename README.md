@@ -6,7 +6,7 @@ Inspired by https://github.com/bartbes/Meta
 
 Monkeypatch lua to add some syntactic sugar:
 
-  - @  : self
+  - **@**  (self)
   - ++
   - +=
   - -=
