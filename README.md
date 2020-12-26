@@ -6,6 +6,7 @@ Inspired by https://github.com/bartbes/Meta
 
 Monkeypatch lua to add some syntactic sugar:
 
+  - @  : self
   - ++
   - +=
   - -=
@@ -45,6 +46,11 @@ script.lua
 ```lua
   local var1 = 10
   var1++
+  
+  local t = { x =  10 }
+  function t:add(number)
+    @.x += number -- same as self.x = self.x + number 
+  end
   
   local var2 = 100
   var2 *= var1
