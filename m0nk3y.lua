@@ -2,10 +2,10 @@ local function parse(s)
 	local str = s
 	local integer    = "([%d]+)"
 	local simple_var = "([%w_]+)"
-	local var        = [=[([%w%.:_'"%[%]]+)]=]
-	local expression = [[([%w%.:_'"%[%]%(%)]+)]]
+	local var        = "([%w%.:_'\"%[%]]+)"
+	local expression = "([%w%.:_'\"%[%]%(%)]+)"
 	local wl         = "[%s]+"
-	local _wl        = "[%s]?"
+	local _wl        = "[%s]-"
 
 	local patterns = {
 		{ patt = "%-%-[^\n]+"         , repl = ""},
