@@ -24,6 +24,9 @@ Monkeypatch lua to add some syntactic sugar:
   - **for** *table* **do end**
   - **for** *value* **in** *table* **do end**
   - **for** *key*, *value* **in** *table* **do end**
+  - **ifor** *table* **do end**
+  - **ifor** *value* **in** *table* **do end**
+  - **ifor** *key*, *value* **in** *table* **do end**
 ## How ?
 https://pgl.yoyo.org/luai/i/require
 
