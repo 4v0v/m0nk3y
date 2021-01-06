@@ -32,7 +32,7 @@ local function parse(s)
 		{ patt = "ifor" .. wl .. simple_var .. "," .. _wl .. simple_var .. wl .. "in" .. wl .. var .. wl .. "do", repl = "for %1, %2 in ipairs(%3) do"},
 	}
 
-	for i, v in ipairs(patterns) do str = str:gsub(v.patt, v.repl) end
+	for _, v in ipairs(patterns) do str = str:gsub(v.patt, v.repl) end
 	return str
 end
 
