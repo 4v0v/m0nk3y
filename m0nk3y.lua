@@ -1,14 +1,13 @@
 local function parse(s)
 	local str = s
 	local integer    = "([%d]+)"
-	local simple_var = "([%w_]+)"
-	local var        = "([%w%.:_'\"%[%]]+)"
-	local expression = "([%w%.:_'\"%[%]%(%)]+)"
+	local simple_var = "([%w_]+)" -- var
+	local var        = "([%w%.:_'\"%[%]]+)" -- var['key']
+	local expression = "([%w%.:_'\"%[%]%(%)]+)" -- var['key'](p1, p2)
 	local wl         = "[%s]+"
 	local _wl        = "[%s]-"
 
 	local patterns = {
-		{ patt = "%-%-[^\n]+"         , repl = ""},
 		{ patt = "@"                  , repl = "self"},
 		{ patt = var .. _wl .. "%+="  , repl = "%1 = %1 + "},
 		{ patt = var .. _wl .. "%-="  , repl = "%1 = %1 - "},
@@ -41,5 +40,6 @@ table.insert(package.loaders, 2, function(name)
 	local file        = love.filesystem.read(name)
 	local parsed_file = parse(file)
 
+	print(parsed_file)
 	return assert(loadstring(parsed_file, name))
 end)
