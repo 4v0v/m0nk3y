@@ -9,7 +9,6 @@ local function parse(s)
 
 	local patterns = {
 		{ patt = "@"                  , repl = "self"},
-		{ patt = wl .."elif" .. wl    , repl = " elseif "},
 		{ patt = var .. _wl .. "%+="  , repl = "%1 = %1 + "},
 		{ patt = var .. _wl .. "%-="  , repl = "%1 = %1 - "},
 		{ patt = var .. _wl .. "%*="  , repl = "%1 = %1 * "},
@@ -18,6 +17,7 @@ local function parse(s)
 		{ patt = var .. _wl .. "%%="  , repl = "%1 = %1 %% "},
 		{ patt = var .. _wl .. "%.%.=", repl = "%1 = %1 .. "},
 		{ patt = var .. _wl .. "%+%+" , repl = "%1 = %1 + 1"},
+		{ patt = wl .."elif" .. wl    , repl = " elseif "},
 		{ patt = "&&"                 , repl = " and "},
 		{ patt = "||"                 , repl = " or "},
 		{ patt = "!="                 , repl = " ~= "},
