@@ -3,7 +3,7 @@ local function parse(s)
 	local integer    = "([%d]+)"
 	local simple_var = "([%w_]+)" -- var
 	local var        = "([%w%.:_'\"%[%]]+)" -- var['key']
-	local expression = "([%w%.:_'\"%[%]%(%)]+)" -- var['key'](p1, p2)
+	local expression = "([%w%.:_'\"%[%]%(%){}]+)" -- var['key'](p1, p2)
 	local wl         = "[%s]+"
 	local _wl        = "[%s]-"
 
