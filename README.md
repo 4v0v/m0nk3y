@@ -37,6 +37,10 @@ Everytime 'require()' is called, modify some tokens with others
 ## Warning
 Currently only work with the Love2d framework, you need to replace the ''love.filesystem.read(name)'' function with your own to make it work with vanilla lua.
 
+Known bugs that I will not fix: 
+- Will replace all ! into 'not' even into strings
+- Will replace all @ into 'self' even into strings
+- *= ect does't have precedence : **x *= 5 + 2** convert to **x = x * 5 + 2**, not **x = x * (5 + 2)**
 
 ## Exemple
 main.lua
